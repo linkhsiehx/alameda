@@ -3,10 +3,11 @@ package datahub
 import (
 	"errors"
 	"fmt"
-	"github.com/containers-ai/alameda/datahub/pkg/dao/score"
-	"github.com/containers-ai/alameda/datahub/pkg/dao/score/impl/influxdb"
 	"net"
 	"time"
+
+	"github.com/containers-ai/alameda/datahub/pkg/dao/score"
+	"github.com/containers-ai/alameda/datahub/pkg/dao/score/impl/influxdb"
 
 	cluster_status_dao "github.com/containers-ai/alameda/datahub/pkg/dao/cluster_status"
 	cluster_status_dao_impl "github.com/containers-ai/alameda/datahub/pkg/dao/cluster_status/impl"
