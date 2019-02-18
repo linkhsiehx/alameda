@@ -109,7 +109,7 @@ $ cd <alameda>/example/deployment/kubernetes
 $ kubectl create -f crds/
 $ kubectl create -f deployconfig/
 ```
-> **Note**: If you are using your own Prometheus, please make sure the container environment variables of deployconfig/datahub.yaml are properly set to connect it.
+> **Note**: If you are using your own Prometheus, please make sure the container environment variables of deployconfig/datahub.yaml are properly set to connect to it.
 
 ## Deploy InfluxDB component
 
@@ -120,15 +120,17 @@ $ cd <alameda>/example/deployment/kubernetes
 $ kubectl create -f 3rdParty/influxdb.yaml
 ``` 
 
-> **Note**: If you are using your own InfluxDB, please make sure the container environment variables of deployconfig/datahub.yaml are properly set to connect it.
+> **Note**: If you are using your own InfluxDB, please make sure the container environment variables of deployconfig/datahub.yaml are properly set to connect to it.
 
 ## Deploy Grafana component (optional)
 
 This component visualizes the predicted metrics. This is optional and can be ignored if you do not need it.
 Alameda core function can work without this Grafana component. Please follow the following commands as your needs.
 
+1. Deploy Grafana service by:
 ```
 $ cd <alameda>/example/deployment/kubernetes
 $ kubectl create -f 3rdParty/grafana.yaml
 ``` 
 
+2. Import Alameda Grafana dashboards json files at `<alameda>/helm/grafana/dashboards/`
