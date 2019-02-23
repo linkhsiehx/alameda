@@ -25,8 +25,8 @@ To get Alameda running, *operator*, *alameda-ai*, *datahub*, *Prometheus* and *I
 
 ```console
 $ git clone https://github.com/containers-ai/alameda
-$ helm install stable/influxdb --version 1.7 --name influxdb --namespace monitoring
-$ helm install stable/prometheus --version 2.6.0 --name prometheus --namespace monitoring -f ./prometheus/values.yaml
+$ helm install stable/influxdb --version 1.1.0 --name influxdb --namespace monitoring
+$ helm install stable/prometheus --version 8.4.0 --name prometheus --namespace monitoring -f ./prometheus/values.yaml
 $ helm install --name alameda --namespace alameda ./alameda
 $ helm install --name grafana --namespace monitoring ./grafana/
 ```
